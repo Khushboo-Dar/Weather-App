@@ -1,6 +1,7 @@
+import { config } from './config.js';
 document.getElementById('fetchWeatherBtn').addEventListener('click', () => {
     const city = document.getElementById('cityInput').value;
-    const apiKey = '26724ee7f5084302829125359241905'; 
+    const apiKey = config.apiKey;
     const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
     fetch(url)
